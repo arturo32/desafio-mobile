@@ -5,7 +5,7 @@ Desenvolva um app onde o aluno/responsável faz login, visualiza documentos esco
 
 Faça download dos arquivos presentes na pasta `assets` para usar como exemplo de documentos.
 
-Em relação a APIs, você pode criar mocks para simular o backend. O objetivo é focar na experiência do usuário e na funcionalidade do app.
+Em relação a APIs, na pasta `assets/mock` você encontrará um mock de API que pode ser usado para simular as requisições, através de um arquivo JSON. Você pode usar esse mock para desenvolver o app, mas é importante que o app funcione como se estivesse consumindo uma API real.
 
 ## **Requisitos Funcionais**
 
@@ -72,6 +72,18 @@ interface UploadedDocument {
   file: File;
 }
 ```
+
+# 📄 Mock 
+
+### **Estrutura de Endpoints Simulados**
+
+| Endpoint | Método | Descrição |
+|----------|--------|-----------|
+| `/api/auth/login` | POST | Login do usuário |
+| `/api/student/documents` | GET | Documentos disponíveis |
+| `/api/student/documents/uploaded` | GET | Documentos enviados |
+| `/api/student/documents/upload` | POST | Upload novo documento |
+| `/api/student/documents/{id}/status` | PUT | Atualizar status |
 
 ## **Fluxos Principais**
 
