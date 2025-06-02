@@ -86,7 +86,7 @@ interface UploadedDocument {
 - Atualização do status em tempo real
 
 ## **Tempo de Entrega**
-**3-4 dias**
+**4-5 dias**
 
 ## **Entregáveis**
 **Repositório GitHub** com:
