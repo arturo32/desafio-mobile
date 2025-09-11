@@ -1,11 +1,8 @@
-import {StyleSheet, Text, View} from 'react-native'
-import {Ionicons} from "@expo/vector-icons";
+import {StyleSheet, View} from 'react-native'
 import ThemedIcon from "@/components/ThemedIcon";
-import {DarkTheme, DefaultTheme, ThemeProvider} from "@react-navigation/native";
 import {useColorScheme} from "@/hooks/useColorScheme";
 import {ThemedText} from "@/components/ThemedText";
 import {GlobalStyle} from "@/constants/GlobalStyle";
-import {Link} from "expo-router";
 import ThemedLink from "@/components/ThemedLink";
 
 const Home = () => {

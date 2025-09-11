@@ -5,6 +5,7 @@ import {ThemedText} from "@/components/ThemedText";
 import ThemedTextInput from "@/components/ThemedTextInput";
 import {useState} from "react";
 import ThemedButton from "@/components/ThemedButton";
+import {login} from "@/mock/api/api";
 
 const Auth = () => {
 	const [registrationNumber, setRegistrationNumber] = useState('');
@@ -16,11 +17,13 @@ const Auth = () => {
 		setError(null);
 		setLoading(true);
 		Keyboard.dismiss();
-		// try {
-		// 	await login(email, password);
-		// } catch (error: any) {
-		// 	setError(error.message);
-		// }
+		try {
+			await login({registrationNumber, password});
+		} catch (error: any) {
+			setError(error);
+		} finally {
+			setLoading(false);
+		}
 	}
 
 	return (
