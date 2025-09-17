@@ -5,7 +5,7 @@ const MOCK = JSON.parse(JSON.stringify(data));
 
 export const login = async (user: User) => {
 	const loginEndpoint = MOCK.apiEndpoints.login;
-	console.log(`Accessing ${loginEndpoint}...`);
+	console.log(`Sending POST ${loginEndpoint}...`);
 	return new Promise<string>(
 		(resolve, reject) => {
 			if(user.registrationNumber === '20251234') {
